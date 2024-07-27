@@ -4,14 +4,13 @@ $font-family_2: 'Roboto', 'Courier New', Courier, monospace;
 $background-color_1: #242424;
 
 @font-face {
-	font-family: 'Roboto';
-	src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
+    font-family: 'TripSans';
+    src: url(../assets/fonts/TripSans/TripSans-Regular.ttf);
 }
 
 body {
 	margin: 0;
-	font-family: $font-family_2;
-	src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
+	font-family: TripSans;
 	overflow-x: hidden;
 
 	#main {
