@@ -20,7 +20,7 @@ function Main() {
       {width >= 576 ? <Header /> : <HeaderMobile />}
       <Router>
         <Routes>
-          <Route path="/" element={<AppLayout />}>
+          <Route path="/rosie-demo" element={<AppLayout />}>
             <Route index element={<App />} />
           </Route>
         </Routes>
