@@ -1,0 +1,706 @@
+$background-1: url(../assets/img/07388ae866580b96e5316e693d52aab3.jpg);
+$background-2: url(../assets/img/5c4916f0501f2fb43443a1b9acb7c6e1.jpg);
+$background-3: url(../assets/img/0b8edecaf86b4c6abdbf6db2acac0aed.jpg);
+$font-family_1: 'Be Vietnam Pro', 'Courier New', Courier, monospace;
+$font-family_2: 'Londrina Solid', 'Courier New', Courier, monospace;
+$color-white: #fff;
+
+@font-face {
+    font-family: 'LondrinaSolid';
+    src: url(../assets/fonts/Londrina_Solid/LondrinaSolid-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'TripSans';
+    src: url(../assets/fonts/TripSans/TripSans-Regular.ttf);
+}
+
+.menu-mobile {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-image: $background-1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 4;
+
+    .gradient-mobile {
+        position: absolute;
+        background: rgb(32, 101, 69, 0.85);
+        width: 100vw;
+        height: 100vh;
+        z-index: 5;
+
+        .inside-mobile {
+            position: absolute;
+            background: linear-gradient(180deg, #122718 0%, rgba(18, 39, 24, 0.00) 35%, rgba(18, 39, 24, 0.00) 70%, #122718 100%);
+            width: 100vw;
+            height: 100vh;
+            z-index: 6;
+            display: flex;
+            flex-direction: row;
+
+            .selection-mobile {
+                position: relative;
+                width: 90%;
+                height: 80vh;
+
+                .logo-mobile {
+                    margin: 4rem 0 0 1.5rem;
+                    width: 9.625rem;
+                    height: 3.1875rem;
+
+                }
+
+                .itemsSection-mobile {
+                    margin: 6rem 0 0 1.5rem;
+                    width: 100%;
+
+                    p {
+                        font-family: 'TripSans';
+                        height: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        display: flex;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                        font-size: 32px;
+                        padding: 0 0 12px 0;
+                        cursor: pointer;
+                    }
+
+                    p:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+            .close-mobile {
+                width: 4rem;
+                height: 4rem;
+                background: rgba(255, 255, 255, 0.20);
+                border-radius: 50px;
+                backdrop-filter: blur(2px);
+                position: absolute;
+                top: 8%;
+                right: 2%;
+                transform: translate(-50%, -50%);
+                z-index: 8;
+                cursor: pointer;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+.home-mobile {
+    .background-mobile {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: $background-1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: 1;
+
+        .outside-mobile {
+            position: absolute;
+            background: rgb(32, 101, 69, 0.85);
+            width: 100vw;
+            height: 100vh;
+            z-index: 2;
+
+            .slideshow-mobile {
+                position: absolute;
+                top: 14vh;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0;
+                z-index: 3;
+
+                .slideshow-container {
+                    position: relative;
+                    width: 80%;
+                    max-width: 800px;
+                    margin: auto;
+                    overflow: hidden;
+                }
+
+                .slide {
+                    display: none;
+                    width: 100%;
+                }
+
+                .slide.active {
+                    display: block;
+                    animation: fade 2s;
+                }
+
+                @keyframes fade {
+                    from {
+                        opacity: 0.4;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+            }
+
+            .slideshow-mobile-zoom {
+                position: relative;
+                bottom: 4vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                z-index: 4;
+
+                .slideshow-container-zoom {
+                    width: 60vw;
+                    height: 60vh;
+                    position: fixed;
+                    bottom: -60vh;
+                    max-width: 800px;
+                    margin: auto;
+                    overflow: hidden;
+                }
+
+                .slide-zoom {
+                    display: none;
+                    width: 100%;
+                }
+
+                .slide-zoom.active {
+                    display: block;
+                    animation: fade-zoom 2s;
+                }
+
+                @keyframes fade-zoom {
+                    from {
+                        opacity: 0.4;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                .img-zoom {
+                    width: 60vw;
+                    height: 60vh;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+            }
+
+        }
+    }
+
+    .desc-mobile {
+        position: relative;
+        z-index: 10;
+        width: 100vw;
+        height: 85vh;
+        background: var(--Grey-Green-Normal, #122718);
+
+        .bike-mobile {
+            position: absolute;
+            left: 20vw;
+            top: -12vw;
+            cursor: pointer;
+        }
+
+        .mountain-mobile {
+            margin-top: -3rem;
+            width: 100vw;
+        }
+
+        .logoAndText-mobile {
+            margin-top: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .textCon {
+                width: 80vw;
+
+                p {
+                    margin-top: 0.25rem;
+                    font-family: "LondrinaSolid";
+                    color: $color-white;
+                    text-align: center;
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                    line-height: 100%;
+                }
+            }
+        }
+
+        .descCircle-mobile {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 0 4rem 0;
+
+
+            .circleBreakLine {
+                width: 8rem;
+                height: 8rem;
+                border-radius: 50%;
+                border: 1px dashed #a9a9a9;
+                margin: 2.5rem 0.5rem -2rem 0.5rem;
+
+                p {
+                    font-size: 0.6rem;
+                    font-family: TripSans;
+                    position: relative;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    width: 8rem;
+                    margin: 56px 0;
+                }
+            }
+
+            @keyframes circleBreakLine {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes text-circle {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(-360deg);
+                }
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+                .circleBreakLine {
+                    animation: circleBreakLine infinite 20s linear;
+
+                    p {
+                        animation: text-circle infinite 20s linear
+                    }
+                }
+            }
+        }
+    }
+
+    .otherCon-mobile {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-image: $background-3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: 9;
+        width: 100vw;
+        height: 135vh;
+
+        .overlayCon-mobile {
+            position: absolute;
+            background: rgb(21, 39, 24, 0.95);
+            background: linear-gradient(180deg, rgba(21, 39, 24, 1) 0%, rgba(21, 39, 24, 0.8) 40%, rgba(21, 39, 24, 1) 70%);
+            width: 100vw;
+            height: 135vh;
+            z-index: 10;
+
+            .mtbBanner-mobile {
+                display: flex;
+                flex-direction: row;
+                margin: 20vh 2.5vw 5vh 2.5vw;
+
+                .contentCont-mobile {
+                    .smallTitleCon {
+                        .textTitle {
+                            text-transform: uppercase;
+                            font-family: 'TripSans';
+                            color: $color-white;
+                            font-size: 0.975rem;
+                            font-weight: 800;
+                            line-height: 120%;
+                            letter-spacing: 0.00875rem;
+                        }
+                    }
+
+                    .titleCon {
+                        width: 80vw;
+
+                        .textTitle {
+                            margin: 0;
+                            text-transform: uppercase;
+                            font-family: 'LondrinaSolid';
+                            color: $color-white;
+                            font-size: 4rem;
+                            font-weight: 900;
+                            line-height: 120%;
+                        }
+                    }
+
+                    .descCon {
+                        .textDesc {
+                            color: var(--greyscaletext-10, #C5C5C5);
+                            font-family: "TripSans";
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 150%;
+                            letter-spacing: 0.005rem;
+                        }
+                    }
+
+                    .advantagesCon {
+                        margin: 48px 0;
+
+                        .advContent {
+                            margin: 16px 0;
+
+                            img {
+                                margin: 0 4px 0 0;
+                            }
+
+                            span {
+                                font-family: TripSans;
+                                font-weight: 700;
+                            }
+                        }
+
+                    }
+
+                    .btnCon {
+                        display: flex;
+                        flex-direction: row;
+
+                        .btn1 {
+                            width: 100%;
+                            display: flex;
+                            height: 3.5rem;
+                            padding: 0.5rem 3rem;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0.5rem;
+                            border-radius: 0.5rem;
+                            border: 1px solid var(--orange-normal-hover, #DA4B19);
+                            background: var(--orange-normal-hover, #DA4B19);
+
+                            span {
+                                color: $color-white;
+                                text-align: center;
+                                font-family: "TripSans";
+                                font-size: 0.875rem;
+                                font-weight: 700;
+                                line-height: 120%;
+                                text-transform: uppercase;
+                            }
+                        }
+
+                        .btn2 {
+                            margin: 0 24px;
+                            width: 100%;
+                            display: flex;
+                            height: 3.5rem;
+                            padding: 0.5rem 3rem;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0.5rem;
+                            border-radius: 0.5rem;
+                            border: 1px solid $color-white;
+                            opacity: 0.6;
+
+                            span {
+                                color: $color-white;
+                                text-align: center;
+                                font-family: "TripSans";
+                                font-size: 0.875rem;
+                                font-weight: 700;
+                                line-height: 120%;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .welcomeCon-mobile {
+                .hoverBackgroundCont-mobile {
+                    position: relative;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    text-align: center;
+                    z-index: 11;
+                    overflow: hidden;
+                    height: 41vh;
+
+                    .moreTitle-mobile {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        z-index: 9;
+
+                        p {
+                            font-family: TripSans;
+                            text-transform: uppercase;
+                            color: $color-white;
+                            font-size: 0.825rem;
+                            font-weight: 800;
+                            line-height: 100%;
+                        }
+                    }
+
+                    .titleCon-mobile {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        position: relative;
+                        z-index: 9;
+
+                        .textTitle {
+                            text-transform: uppercase;
+                            font-family: 'LondrinaSolid';
+                            color: $color-white;
+                            font-size: 2rem;
+                            font-weight: 900;
+                            line-height: 100%;
+                        }
+                    }
+
+                    .textDecor-mobile {
+                        position: absolute;
+                        margin: -1.25rem auto 0 auto;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        z-index: 9;
+                    }
+
+                    .hoverBackground-mobile {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        text-align: center;
+
+                        img {
+                            width: 12.42269rem;
+                            height: 6.98775rem;
+                            border-radius: 0.5rem;
+                            transition: transform 1.5s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .explore-mobile {
+        position: relative;
+        z-index: 10;
+        width: 100vw;
+        height: 90vh;
+        background: $color-white;
+        padding: 5vh 2.5vw 5vh 3vw;
+
+        .smallTitleCon {
+            .textTitle {
+                text-transform: uppercase;
+                font-family: 'TripSans';
+                color: #a4a4a4;
+                font-size: 0.975rem;
+
+                font-weight: 800;
+                line-height: 180%;
+                letter-spacing: 0.00875rem;
+            }
+        }
+
+        .titleCon {
+            width: 60vw;
+            margin: 1rem 0 3rem;
+
+            .textTitle {
+                text-transform: uppercase;
+                font-family: 'LondrinaSolid';
+                color: #262626;
+                font-size: 4rem;
+
+                font-weight: 900;
+                line-height: 120%;
+            }
+        }
+
+        .featured {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 0.75rem;
+            overflow-x: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            .featuredCard {
+                width: 70vw;
+                height: 60vh;
+                flex-shrink: 0;
+                background-image: $background-3;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                border-radius: 1rem;
+                font-family: "TripSans";
+                position: relative;
+
+                .fCardOverlay {
+                    width: 70vw;
+                    height: 60vh;
+                    flex-shrink: 0;
+                    background: linear-gradient(180deg, rgba(18, 39, 24, 0.00) 0%, #122718 100%);
+                    border-radius: 1rem;
+                    position: absolute;
+
+                    .fCardContent {
+                        padding: 1.75rem 1.75rem 0;
+                        position: absolute;
+                        bottom: 0;
+
+                        .timeDetails {
+                            display: flex;
+                            padding: 0.005rem 0.5rem;
+                            align-items: center;
+                            gap: 0.25rem;
+                            border-radius: 0.96956rem;
+                            border: 0.646px solid rgba(255, 255, 255, 0.52);
+                            background: rgba(255, 255, 255, 0.20);
+                            backdrop-filter: blur(1.292738914489746px);
+                            width: fit-content;
+
+                            img {
+                                margin: 0 0.125rem 0 0;
+                            }
+
+                            p {
+                                color: $color-white;
+                                font-size: 0.75rem;
+                                font-weight: 700;
+                                line-height: 120%;
+                            }
+                        }
+
+                        .costDetailsCon {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            margin: 2rem 0 0 0;
+
+                            .costDetails {
+                                span:nth-child(1) {
+                                    margin: 0 0.25rem 0 0;
+                                    color: $color-white;
+                                    text-align: right;
+                                    font-size: 1.3rem;
+                                    font-weight: 700;
+                                    line-height: 120%;
+                                }
+
+                                span:nth-child(2) {
+                                    color: $color-white;
+                                    font-size: 1.25rem;
+                                    text-decoration: underline;
+                                    font-weight: 700;
+                                    line-height: 150%;
+                                }
+                            }
+                        }
+                    }
+
+                    .tripDetails {
+                        color: $color-white;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        line-height: 120%;
+                        margin-top: 0.75rem;
+                    }
+
+                    .infoDetails {
+                        margin-bottom: 4.5rem;
+
+                        .infoDetailsContent {
+                            margin: 0.25rem 0;
+                            flex-direction: row;
+
+                            img {
+                                margin-right: 0.25rem;
+                            }
+
+                            b {
+                                margin-right: 0.25rem;
+                            }
+
+                            .contents {
+                                width: 100%;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+                }
+
+                .btnBookNow {
+                    display: flex;
+                    width: 70vw;
+                    height: 3.5rem;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+                    border-radius: 0rem 0rem 1rem 1rem;
+                    background: var(--orange-normal-hover, #DA4B19);
+                    position: absolute;
+                    bottom: 0;
+
+                    span {
+                        text-transform: uppercase;
+                        font-size: 1.125rem;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 120%;
+                        padding: 0 0.5rem
+                    }
+                }
+            }
+        }
+
+        .featured::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

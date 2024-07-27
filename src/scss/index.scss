@@ -1,0 +1,100 @@
+$color_1: rgba(255, 255, 255, 0.87);
+$font-family_1: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family_2: 'Roboto', 'Courier New', Courier, monospace;
+$background-color_1: #242424;
+
+@font-face {
+	font-family: 'Roboto';
+	src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+	margin: 0;
+	font-family: $font-family_2;
+	src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
+	overflow-x: hidden;
+
+	#main {
+		overflow-x: hidden;
+		font-family: $font-family_1;
+		font-weight: 400;
+		color-scheme: light dark;
+		color: $color_1;
+		height: 100vh;
+	}
+}
+
+.navbar {
+	width: 93.5%;
+	padding: 1.5rem 5rem;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 3;
+	position: absolute;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+
+		.logo {
+			width: 9.625rem;
+			height: 3.1875rem;
+			
+
+		}
+
+		.btnMenu {
+			cursor: pointer;
+			display: flex;
+			padding: 0.5rem 1rem 0.5rem 0.5rem;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 0.4375rem;
+			border-radius: 1.5rem;
+			background: #E64827;
+
+			span {
+				color: #fff;
+				font-weight: 800;
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+.navbar-mobile {
+	width: 90%;
+	padding: 1.5rem 1rem;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 3;
+	position: absolute;
+
+	.container-mobile {
+		display: flex;
+		justify-content: space-between;
+
+		.logo-mobile {
+			width: 9.625rem;
+			height: 3.1875rem;
+			
+		}
+
+		.btnMenu-mobile {
+			cursor: pointer;
+			display: flex;
+			padding: 0.5rem 1rem 0.5rem 0.5rem;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 0.4375rem;
+			border-radius: 1.5rem;
+			border: 1px solid #fff;
+
+			span {
+				color: #fff;
+				font-weight: 800;
+				font-size: 22px;
+			}
+		}
+	}
+}

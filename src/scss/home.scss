@@ -1,0 +1,817 @@
+$background-1: url(../assets/img/07388ae866580b96e5316e693d52aab3.jpg);
+$background-2: url(../assets/img/5c4916f0501f2fb43443a1b9acb7c6e1.jpg);
+$background-3: url(../assets/img/0b8edecaf86b4c6abdbf6db2acac0aed.jpg);
+$font-family_1: 'Be Vietnam Pro', 'Courier New', Courier, monospace;
+$font-family_2: 'Londrina Solid', 'Courier New', Courier, monospace;
+$color-white: #fff;
+
+@font-face {
+    font-family: 'LondrinaSolid';
+    src: url(../assets/fonts/Londrina_Solid/LondrinaSolid-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'TripSans';
+    src: url(../assets/fonts/TripSans/TripSans-Regular.ttf);
+}
+
+// .infoContainer {
+
+
+//     .informations {
+
+
+.actionCon {
+    position: relative;
+    bottom: 4vh;
+    right: -47.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: TripSans;
+    z-index: 3;
+
+    .actionPopup {
+        position: fixed;
+        bottom: 4vh;
+        border-radius: 0.75rem;
+        background: $color-white;
+        display: inline-flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0);
+
+        div {
+            margin: 0.25rem 0;
+        }
+
+        .bookNow {
+            width: 3.125rem;
+            height: 3.125rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: #DA4B19;
+
+            p {
+                position: relative;
+                color: $color-white;
+                top: 50%;
+                left: 75%;
+                transform: translate(-50%, -50%);
+                font-family: "TripSans";
+                font-size: 0.6rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.menu {
+    position: fixed;
+    height: 80vh;
+    width: 100%;
+    background-image: $background-1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 4;
+    border-radius: 0 0 40px 40px;
+
+    .gradient {
+        position: absolute;
+        background: rgb(32, 101, 69, 0.85);
+        width: 100vw;
+        height: 80vh;
+        z-index: 5;
+        border-radius: 0 0 40px 40px;
+
+        .inside {
+            position: absolute;
+            background: linear-gradient(180deg, #122718 0%, rgba(18, 39, 24, 0.00) 35%, rgba(18, 39, 24, 0.00) 70%, #122718 100%);
+            width: 100vw;
+            height: 80vh;
+            z-index: 6;
+            display: flex;
+            flex-direction: row;
+            border-radius: 0 0 40px 40px;
+
+            .selection {
+                position: relative;
+                width: 50vw;
+                height: 80vh;
+
+                .logo {
+                    margin: 2rem 0 0 4rem;
+                    width: 9.625rem;
+                    height: 3.1875rem;
+
+                }
+
+                .itemsSection {
+                    margin: 6rem 0 0 4rem;
+                    width: 400px;
+
+                    p {
+                        font-family: 'TripSans';
+                        height: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        display: flex;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                        font-size: 32px;
+                        padding: 0 0 12px 0;
+                        cursor: pointer;
+                    }
+
+                    p:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+            .image {
+                position: relative;
+                width: 50vw;
+                height: 80vh;
+                top: 0;
+                bottom: 0;
+                background-image: $background-2;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                border-radius: 0 0 40px 0;
+                z-index: 7;
+
+                .close {
+                    width: 4rem;
+                    height: 4rem;
+                    background: rgba(255, 255, 255, 0.20);
+                    border-radius: 50px;
+                    backdrop-filter: blur(2px);
+                    position: absolute;
+                    top: 7%;
+                    right: 2%;
+                    transform: translate(-50%, -50%);
+                    z-index: 8;
+                    cursor: pointer;
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home {
+    .background {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: $background-1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: 1;
+
+        .outside {
+            position: absolute;
+            background: rgb(32, 101, 69, 0.85);
+            width: 100vw;
+            height: 100vh;
+            z-index: 2;
+
+            .circles {
+                .circle {
+                    width: 0.625rem;
+                    height: 0.625rem;
+                    stroke-width: 1px;
+                    stroke: #D9D9D9;
+                }
+
+                .circle-1 {
+                    position: relative;
+                    margin: auto;
+                    top: 15vh;
+                }
+
+                .circle-2 {
+                    position: relative;
+                    top: calc(50vh);
+                    left: 15%;
+                    transform: translate(-50%, -50%);
+                }
+
+                .circle-3 {
+                    position: relative;
+                    top: calc(50vh - 8px);
+                    left: 85%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .miniText {
+                position: absolute;
+                top: 50vh;
+                left: 0.5%;
+                transform: translate(-50%, -50%);
+                color: $color-white;
+                text-align: center;
+                font-size: 0.75rem;
+                font-weight: 800;
+                line-height: 120%;
+                letter-spacing: 0.0038rem;
+                transform: rotate(90deg);
+                width: fit-content;
+            }
+
+            .contents {
+                position: relative;
+                z-index: 4;
+
+
+                .smallTitle {
+                    text-transform: uppercase;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    top: 35vh;
+                    font-size: 1.5rem;
+                    color: $color-white;
+                    font-weight: 800;
+                    opacity: 0.4;
+                    font-family: TripSans;
+                }
+
+                .bigContent {
+                    text-transform: uppercase;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    top: 35vh;
+                    font-size: 6rem;
+                    font-weight: 400;
+                    line-height: 100%;
+                    background: linear-gradient(180deg, $color-white 0%, rgba(255, 255, 255, 0.00) 131.51%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    p {
+                        margin: 0;
+                        font-family: TripSans;
+                    }
+
+                    p:first-child {
+                        margin: 0;
+                    }
+
+                    p:last-child {
+                        margin: 28px 0 0 0;
+                    }
+                }
+
+            }
+
+            .infoContainer {
+                position: relative;
+                bottom: 4vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                font-family: TripSans;
+                z-index: 3;
+
+                .informations {
+                    position: fixed;
+                    bottom: 4vh;
+                    border-radius: 0.75rem;
+                    background: $color-white;
+                    display: inline-flex;
+                    flex-direction: row;
+                    padding: 0.75rem 0.75rem 0.75rem 2rem;
+                    gap: 1.875rem;
+
+                    .details {
+                        min-width: 180px;
+                        height: fit-content;
+                        padding: 8px 0;
+                        border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+                        .title {
+                            color: #727272;
+                            text-transform: uppercase;
+                            margin-bottom: 4px;
+                        }
+
+                        .time {
+                            color: #000;
+                            margin-top: 4px;
+                            font-weight: 900;
+                        }
+                    }
+
+                    .btnContainer {
+                        .bookBtn {
+                            border-radius: 0.5rem;
+                            background: var(--Orange-Normal, #E64827);
+                            display: flex;
+                            padding: 0.5rem 2rem;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            p {
+                                font-weight: bolder;
+                            }
+
+                            p:first-child {
+                                margin: 0;
+                                font-size: 40px;
+                            }
+
+                            p:last-child {
+                                margin: 8px 0 0 0;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .slideshow {
+                position: absolute;
+                top: 12vh;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0;
+                z-index: 2;
+
+                .slideshow-container {
+                    position: relative;
+                    width: 100%;
+                    max-width: 800px;
+                    margin: auto;
+                    overflow: hidden;
+                }
+
+                .slide {
+                    display: none;
+                    width: 32vw;
+                }
+
+                .slide.active {
+                    display: block;
+                    animation: fade 2s;
+                }
+
+                @keyframes fade {
+                    from {
+                        opacity: 0.9;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .slideshow-zoom {
+                position: relative;
+                bottom: 4vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                z-index: 2;
+
+                .slideshow-container-zoom {
+                    width: 70vw;
+                    height: 60vh;
+                    position: fixed;
+                    bottom: -60vh;
+                    max-width: 800px;
+                    margin: auto;
+                    overflow: hidden;
+                    border-radius: 3rem 3rem 3rem 3rem;
+                }
+
+                .slide-zoom {
+                    display: none;
+                    width: 100%;
+                }
+
+                .slide-zoom.active {
+                    display: block;
+                    animation: fade-zoom 3s;
+                }
+
+                @keyframes fade-zoom {
+                    from {
+                        opacity: 0.9;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                .img-zoom {
+                    width: 70vw;
+                    height: 60vh;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .desc {
+        position: relative;
+        z-index: 10;
+        width: 100vw;
+        height: 100%;
+        background: var(--Grey-Green-Normal, #122718);
+
+        .mountain {
+            margin-top: -24px;
+            width: 100vw;
+        }
+
+        .logoAndText {
+            margin-top: -6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .textCon {
+            width: 60rem;
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            p {
+                font-family: "LondrinaSolid";
+                color: $color-white;
+                text-align: center;
+                font-size: 3.5rem;
+                font-weight: 900;
+                line-height: 100%;
+            }
+        }
+
+        .descCircle {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0 0 6rem 0;
+
+
+            .circleBreakLine {
+                width: 11.375rem;
+                height: 11.375rem;
+                border-radius: 50%;
+                border: 1px dashed #a9a9a9;
+                margin: 2.5rem 2rem -2rem 2rem;
+
+                p {
+                    font-family: TripSans;
+                    position: relative;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    width: 11.375rem;
+                    margin: 76px 0;
+                }
+            }
+
+            @keyframes circleBreakLine {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes text-circle {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(-360deg);
+                }
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+                .circleBreakLine {
+                    animation: circleBreakLine infinite 20s linear;
+
+                    p {
+                        animation: text-circle infinite 20s linear
+                    }
+                }
+            }
+        }
+
+        .moreTitle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span {
+                font-family: TripSans;
+                text-transform: uppercase;
+                font-weight: 500;
+                margin-bottom: 2rem;
+            }
+
+            img {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .otherCon {
+        position: relative;
+        background-image: $background-3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: 9;
+        width: 100vw;
+        height: 200vh;
+
+        .overlayCon {
+            position: absolute;
+            background: rgb(21, 39, 24, 0.95);
+            background: linear-gradient(180deg, rgba(21, 39, 24, 1) 0%, rgba(21, 39, 24, 0.9) 20%, rgba(21, 39, 24, 0.8) 100%);
+            width: 100vw;
+            height: 200vh;
+            z-index: 10;
+
+            .mtbBanner {
+                display: grid;
+                height: 100vh;
+                grid-template-columns: 40% 10% 40%;
+                margin: 0 5vw 0 5vw;
+                position: relative;
+
+                .contentCont {
+                    width: 35vw;
+
+                    .titleCon {
+                        .textTitle {
+                            text-transform: uppercase;
+                            font-family: 'LondrinaSolid';
+                            color: $color-white;
+                            font-size: 4rem;
+                            font-weight: 900;
+                            line-height: 100%;
+                        }
+                    }
+
+                    .descCon {
+                        .textDesc {
+                            color: var(--greyscaletext-10, #C5C5C5);
+                            font-family: "TripSans";
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 150%;
+                            letter-spacing: 0.005rem;
+                        }
+                    }
+
+                    .advantagesCon {
+                        margin: 48px 0;
+
+                        .advContent {
+                            margin: 16px 0;
+
+                            img {
+                                margin: 0 4px 0 0;
+                            }
+
+                            span {
+                                font-family: TripSans;
+                                font-weight: 700;
+                            }
+                        }
+
+                    }
+
+                    .btnCon {
+                        display: flex;
+                        flex-direction: row;
+
+                        .btn1 {
+                            display: flex;
+                            height: 3.5rem;
+                            padding: 0.5rem 3rem;
+                            align-items: center;
+                            gap: 0.5rem;
+                            border-radius: 0.5rem;
+                            border: 1px solid var(--orange-normal-hover, #DA4B19);
+                            background: var(--orange-normal-hover, #DA4B19);
+
+                            span {
+                                color: $color-white;
+                                text-align: center;
+                                font-family: "TripSans";
+                                font-size: 0.875rem;
+                                font-weight: 700;
+                            }
+                        }
+
+                        .btn2 {
+                            margin: 0 24px;
+                            display: flex;
+                            height: 3.5rem;
+                            padding: 0.5rem 3rem;
+                            align-items: center;
+                            gap: 0.5rem;
+                            border-radius: 0.5rem;
+                            border: 1px solid $color-white;
+                            opacity: 0.6;
+
+                            span {
+                                color: $color-white;
+                                text-align: center;
+                                font-family: "TripSans";
+                                font-size: 0.875rem;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                .road {
+                    width: 5vw
+                }
+                .cloudSectionTrigger {
+                    .cloudAndMountains {
+                        position: relative;
+                        width: 60%;
+                        height: 60%;
+                        top: 9vh;
+                        right: -3vw;
+                        z-index: 7;
+    
+                        .cloudSection {
+                            position: relative;
+                            right: -25vw;
+                            .cloudASection {
+                                position: absolute;
+                                width: 28.02056rem;
+                                height: 11.87025rem;
+                                transform: rotate(0.482deg);
+                                z-index: 2;
+                                animation: zoomInOut 4s infinite alternate;
+                            }
+    
+                            .cloudBSection {
+                                position: absolute;
+                                width: 14.625rem;
+                                height: 14.0625rem;
+                                transform: rotate(27.145deg);
+                                z-index: 2;
+                                animation: zoomInOut 4s infinite alternate;
+                            }
+    
+                            .cloudCSection {
+                                position: absolute;
+                                width: 19.1875rem;
+                                height: 14.0625rem;
+                                z-index: 2;
+                                animation: zoomInOut 4s infinite alternate;
+                            }
+    
+                            @keyframes zoomInOut {
+                                0% {
+                                    left: 0px;
+                                    top: 0px;
+                                    right: 0px;
+                                    bottom: 0px;
+                                }
+                                50% {
+                                    left: 4px;
+                                    top: 4px;
+                                    right: 8px;
+                                    bottom: 8px;
+                                }
+                                100% {
+                                    left: 0px;
+                                    top: 0px;
+                                    right: 0px;
+                                    bottom: 0px;
+                                }
+                            }
+                            
+                            .opacityCloud {
+                                opacity: 0.6;
+                            }
+    
+                            .mountainSection {
+                                position: absolute;
+                                width: 51.1875rem;
+                                height: 33.3125rem;
+                                z-index: 1
+                            }
+                        }
+                    }
+                }
+            }
+
+            .welcomeCon {
+
+                .hoverBackgroundCont {
+                    position: relative;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    text-align: center;
+                    z-index: 11;
+                    overflow: hidden;
+                    height: 100vh;
+
+                    .moreTitle {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        z-index: 9;
+
+                        p {
+                            font-family: TripSans;
+                            text-transform: uppercase;
+                            color: $color-white;
+                            font-size: 1.125rem;
+                            font-weight: 800;
+                            line-height: 100%;
+                        }
+                    }
+
+                    .titleCon {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        z-index: 9;
+
+                        .textTitle {
+                            text-transform: uppercase;
+                            font-family: 'LondrinaSolid';
+                            color: $color-white;
+                            font-size: 4rem;
+                            font-weight: 900;
+                            line-height: 100%;
+                        }
+                    }
+
+                    .textDecor {
+                        position: relative;
+                        margin: -3.25rem auto 0 auto;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        z-index: 9;
+                    }
+
+                    .hoverBackground {
+                        position: absolute;
+                        bottom: 0;
+                        background: $color-white;
+                        display: inline-flex;
+                        flex-direction: row;
+
+                        .zoomImage {
+                            width: 53rem;
+                            height: 29.8125rem;
+                            border-radius: 0.5rem;
+                            transition: transform 1.5s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
